@@ -3,9 +3,6 @@ import express from "express"
 import cors from "cors"
 import { PrismaClient } from '@prisma/client';
 import userRoutes from './routes/userRoutes.js';
-import queryRoutes from './routes/queryRoutes.js';
-import uploadRoutes from "./routes/uploadRoutes.js";
-import classifyRoutes from './routes/classifyRoutes.js';
 import path from "path";
 
 dotenv.config();
@@ -17,11 +14,9 @@ app.use(express.json());
 app.use(express.static("uploads")); 
 
 app.use('/api/users', userRoutes);
-app.use('/api/queries', queryRoutes);
-app.use("/api/upload", uploadRoutes);
-app.use('/api/classify', classifyRoutes);
 
-app.get('/', (req, res) => {
+
+app.get('/', (req, res) => { 
   res.send('Bird Voice Classification API is running');
 });
 

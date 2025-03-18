@@ -1,0 +1,10 @@
+.background {
+    background-image: url("../images/restuarant.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
